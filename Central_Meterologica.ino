@@ -8,12 +8,12 @@
 HX711 scale(D5, D6); // declaramos los pines de DT y SCK
 //------------------------------------------------------------
 
-#define USERNAME "usuario"
-#define DEVICE_ID "Dispositivo"
-#define DEVICE_CREDENTIAL "Credencial"
+#define USERNAME "EzequielVincet"
+#define DEVICE_ID "NodeMcu_EMA"
+#define DEVICE_CREDENTIAL "y?HFV$MTKzOjPyFH"
 
-#define SSID "Nombre de la red "
-#define SSID_PASSWORD "Contraseña de la red"
+#define SSID "FTTH_VINCET"
+#define SSID_PASSWORD "reddebvincet"
 
 ThingerESP8266 thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
 
@@ -54,6 +54,7 @@ void setup() {
 void loop() {
   
   if ((millis() - tiempoAnterior) >= periodo) {
+    scale.power_up();
     thing.handle();
     tiempoAnterior = millis();
     //----------------------------------------
@@ -73,5 +74,5 @@ void loop() {
     scale.power_down(); // “duerme el sensor” para reiniciar
   }
 
-  scale.power_up();
+  
 }
