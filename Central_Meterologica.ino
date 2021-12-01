@@ -8,12 +8,12 @@
 HX711 scale(D5, D6); // declaramos los pines de DT y SCK
 //------------------------------------------------------------
 
-#define USERNAME "EzequielVincet"
-#define DEVICE_ID "NodeMcu_EMA"
-#define DEVICE_CREDENTIAL "y?HFV$MTKzOjPyFH"
+#define USERNAME "usuario de thinger"
+#define DEVICE_ID "dispositivo"
+#define DEVICE_CREDENTIAL "credencial"
 
-#define SSID "FTTH_VINCET"
-#define SSID_PASSWORD "reddebvincet"
+#define SSID "red wifi"
+#define SSID_PASSWORD "contraseña"
 
 ThingerESP8266 thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
 
